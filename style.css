@@ -1,0 +1,73 @@
+
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+:root{
+	--bg:#0b0b0b;
+	--panel:#0f1114;
+	--accent:#00ffcc;
+	--muted:#9aa0a6;
+	--glass: rgba(255,255,255,0.03);
+	--radius:12px;
+}
+
+*{box-sizing:border-box}
+
+.hero-sub{margin:0 0 16px 0;color:var(--muted)}
+.hero-ctas .btn{margin-right:10px}
+.hero-visual{min-width:240px}
+.small-slots{list-style:none;padding:0;margin:8px 0 0 0;color:var(--muted)}
+
+.container{max-width:1100px;margin:24px auto;padding:0 18px}
+.features{margin-bottom:16px}
+.features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}
+.feature h4{margin:0 0 8px 0;color:var(--accent)}
+
+.cta{display:flex;align-items:center;justify-content:space-between}
+
+.footer{text-align:center;padding:18px;color:var(--muted)}
+
+/* Buttons and links */
+.btn{display:inline-block;padding:10px 14px;border-radius:8px;background:transparent;color:var(--muted);text-decoration:none;border:1px solid rgba(255,255,255,0.04);cursor:pointer}
+.btn.primary{background:var(--accent);color:#001; border:none;font-weight:700}
+
+.muted{color:var(--muted);margin-top:6px}
+
+/* Login card specifics */
+.login-card{width:360px;text-align:center}
+.login-card h2{margin:0 0 6px 0}
+.field{display:block;margin-top:12px}
+.field input{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit}
+.alt{display:flex;justify-content:space-between;margin-top:12px}
+.link{color:var(--muted);text-decoration:none;font-size:13px}
+
+/* Existing gaming hub styles (slots & booking) */
+header{display:flex;justify-content:space-between;padding:15px;background:#111}
+.walletCard{background:var(--accent);color:black;padding:8px 15px;border-radius:20px;font-weight:bold}
+.slotsSection{flex:2}
+.slots{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.slots button{background:#161616;border:1px solid var(--accent);color:var(--accent);padding:30px;border-radius:15px;cursor:pointer;font-size:16px}
+.slots button:hover{background:var(--accent);color:black}
+.slots button:disabled{background:#333;color:gray;border:none}
+.bookingSection{flex:1;background:#161616;padding:20px;border-radius:15px}
+h2{color:var(--accent)}
+.bookingCard{background:#111;padding:15px;border-radius:10px;margin-top:15px}
+.cancelBtn{background:red;border:none;color:white;padding:10px;width:100%;margin-top:15px;border-radius:10px}
+
+@media (max-width:880px){
+	.features-grid{grid-template-columns:1fr}
+	.hero-inner{flex-direction:column;align-items:flex-start}
+	.small-slots{font-size:14px}
+}

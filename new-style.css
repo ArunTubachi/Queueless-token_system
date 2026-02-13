@@ -1,0 +1,306 @@
+:root{
+	--bg:#0b0b0b;
+	--panel:#0f1114;
+	--accent:#00ffcc;
+	--muted:#9aa0a6;
+	--glass: rgba(255,255,255,0.03);
+	--radius:12px;
+}
+
+*{box-sizing:border-box}
+body{
+    margin:0;
+    font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+    background:linear-gradient(180deg,#050505,var(--bg));
+    color:#e8eef1;
+}
+
+/* Center helper used by login */
+.center{display:flex;align-items:center;justify-content:center;min-height:100vh;padding:24px}
+
+.card{background:var(--panel);padding:18px;border-radius:var(--radius);box-shadow:0 8px 30px rgba(0,0,0,0.6)}
+.compact{padding:12px}
+
+/* Hero / Landing */
+.hero{padding:40px 18px;background:linear-gradient(90deg, rgba(0,0,0,0.45), rgba(0,0,0,0.15));}
+.hero-inner{max-width:1100px;margin:0 auto;display:flex;gap:20px;align-items:center;justify-content:space-between}
+.hero-title{font-size:32px;margin:0 0 8px 0;color:var(--accent)}
+.hero-sub{margin:0 0 16px 0;color:var(--muted)}
+.hero-ctas .btn{margin-right:10px}
+.hero-visual{min-width:240px}
+.small-slots{list-style:none;padding:0;margin:8px 0 0 0;color:var(--muted)}
+
+.container{max-width:1100px;margin:24px auto;padding:0 18px}
+.features{margin-bottom:16px}
+.features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}
+.feature h4{margin:0 0 8px 0;color:var(--accent)}
+
+.cta{display:flex;align-items:center;justify-content:space-between}
+
+.footer{text-align:center;padding:18px;color:var(--muted)}
+
+/* Buttons and links */
+.btn{display:inline-block;padding:10px 14px;border-radius:8px;background:transparent;color:var(--muted);text-decoration:none;border:1px solid rgba(255,255,255,0.04);cursor:pointer}
+.btn.primary{background:var(--accent);color:#001; border:none;font-weight:700}
+
+.muted{color:var(--muted);margin-top:6px}
+
+/* Login card specifics */
+.login-card{width:360px;text-align:center}
+.login-card h2{margin:0 0 6px 0}
+.field{display:block;margin-top:12px}
+.field input{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit}
+.alt{display:flex;justify-content:space-between;margin-top:12px}
+.link{color:var(--muted);text-decoration:none;font-size:13px}
+
+/* Existing gaming hub styles (slots & booking) */
+header{display:flex;justify-content:space-between;padding:15px;background:#111}
+.walletCard{background:var(--accent);color:black;padding:8px 15px;border-radius:20px;font-weight:bold}
+.slotsSection{flex:2}
+.slots{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.slots button{background:#161616;border:1px solid var(--accent);color:var(--accent);padding:30px;border-radius:15px;cursor:pointer;font-size:16px}
+.slots button:hover{background:var(--accent);color:black}
+.slots button:disabled{background:#333;color:gray;border:none}
+.bookingSection{flex:1;background:#161616;padding:20px;border-radius:15px}
+h2{color:var(--accent)}
+.bookingCard{background:#111;padding:15px;border-radius:10px;margin-top:15px}
+.cancelBtn{background:red;border:none;color:white;padding:10px;width:100%;margin-top:15px;border-radius:10px}
+
+@media (max-width:880px){
+  .features-grid{grid-template-columns:1fr}
+  .hero-inner{flex-direction:column;align-items:flex-start}
+  .small-slots{font-size:14px}
+}
+
+/* Page show/hide */
+.page{display:block}
+.hide{display:none}
+
+/* Topbar for user page */
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:14px 18px;background:transparent;max-width:1100px;margin:0 auto}
+.topbar .top-actions{display:flex;align-items:center;gap:12px}
+.topbar .brand h3{margin:0;color:var(--accent)}
+
+.grid{display:grid;grid-template-columns:1fr 340px;gap:18px}
+.slotsCard{min-height:250px}
+.slots{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+
+.mobile-nav{display:none}
+.desktop-nav button{margin:0 6px;padding:8px 12px;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--muted)}
+
+@media (max-width:880px){
+  .grid{grid-template-columns:1fr}
+  .slots{grid-template-columns:repeat(2,1fr)}
+  .mobile-nav{display:flex;position:fixed;bottom:0;left:0;right:0;height:56px;background:#0d0d0d;border-top:1px solid rgba(255,255,255,0.03);justify-content:space-around;align-items:center}
+  .mobile-nav button{background:transparent;border:none;color:var(--muted);font-size:18px}
+  .desktop-nav{display:none}
+}
+
+/* small adjustments */
+.walletCard{font-weight:700}
+.top-actions .walletCard{margin-right:8px}
+
+/* Neon highlight for logged-in user name */
+.profile-info .name {
+  color: var(--accent);
+  text-shadow: 0 0 8px rgba(0, 255, 204, 0.6);
+  font-weight: 600;
+}
+
+/* Token Card UI */
+.token-card {
+  margin-top: 16px;
+  border: 1px solid rgba(0,255,204,0.3);
+  box-shadow: 0 0 20px rgba(0,255,204,0.08);
+}
+
+.token-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.token-row:last-child {
+  margin-bottom: 0;
+}
+
+.token-row .label {
+  color: var(--muted);
+}
+
+.token-row .value {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.token-row .status {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Inline error above slots */
+.error-box {
+  margin: 10px 0 14px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: rgba(255, 60, 60, 0.08);
+  border: 1px solid rgba(255, 60, 60, 0.35);
+  color: #ff6b6b;
+  font-size: 13px;
+}
+
+.hide {
+  display: none;
+}
+
+#logoutBtn {
+  margin-left: 10px;
+  font-size: 12px;
+  padding: 6px 10px;
+}
+
+/* Neon Logout Button */
+#logoutBtn {
+  margin-left: 10px;
+  padding: 8px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+/* Hover effect */
+#logoutBtn:hover {
+  background: var(--accent);
+  color: #001;
+  box-shadow: 0 0 12px rgba(0, 255, 204, 0.6);
+}
+
+/* Status badges */
+.status {
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.status.WAITING {
+  color: #ffd84d;
+  text-shadow: 0 0 8px rgba(255,216,77,0.6);
+}
+
+.status.CONFIRMED {
+  color: #00ff88;
+  text-shadow: 0 0 8px rgba(0,255,136,0.6);
+}
+
+.status.CANCELLED {
+  color: #ff4d4d;
+  text-shadow: 0 0 8px rgba(255,77,77,0.6);
+}
+
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+}
+
+.admin-table th,
+.admin-table td {
+  padding: 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  text-align: left;
+}
+
+.admin-table th {
+  color: var(--accent);
+}
+
+.stats {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.stat-card {
+  background: #111;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+}
+
+.slotBtn {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.slot-name {
+  font-weight: 600;
+}
+
+.slot-time {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.bg-landing {
+  background: 
+    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.85)),
+    url("../images/bg-landing.jpg") center / cover no-repeat fixed;
+}
+
+.bg-login {
+  background:
+    linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)),
+    url("../images/bg-login.png") center / cover no-repeat fixed;
+}
+
+.bg-dashboard {
+  background:
+    linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.9)),
+    url("../images/bg-dashboard.jpg") center / cover no-repeat fixed;
+}
+
+.bg-admin {
+  background:
+    linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.95)),
+    url("../images/bg-admin.jpg") center / cover no-repeat fixed;
+}
+
+.bg-dashboard {
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.95)),
+    url("../images/bg-dashboard.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* ===== PAGE BACKGROUNDS ===== */
+
+.bg-login {
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)),
+    url("../images/bg-login.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bg-user {
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.95)),
+    url("../images/bg-user.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}

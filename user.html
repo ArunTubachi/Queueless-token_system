@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" href="css/new-style.css">
+	<title>Toki Gaming Hub — Dashboard</title>
+
+</head>
+
+<body class="bg-user">
+
+	<header class="topbar">
+		<div class="brand">
+			<h3>Toki Gaming Hub</h3>
+		</div>
+		<div class="top-actions">
+			<div class="walletCard">Coins: <span id="coins">0</span></div>
+			<div class="profile">
+  <div class="avatar">TT</div>
+  <div class="profile-info">
+    <div class="name" id="welcomeUser">Guest</div>
+    <small class="sub">Welcome</small>
+  </div>
+  <button id="logoutBtn" class="btn">Logout</button>
+</div>
+
+		</div>
+	</header>
+
+	<main class="container">
+
+		<!-- HOME -->
+		<section id="home" class="page">
+			<div class="grid">
+				<div class="card slotsCard">
+					<h2>Available Slots</h2>
+					<div id="slotError" class="error-box hide"></div>
+					<div class="slots" aria-live="polite"></div>
+				</div>
+
+				<aside class="card bookingSection" id="bookingInfo">
+					<h2>Your Booking</h2>
+					<p>No booking yet</p>
+				</aside>
+			</div>
+		</section>
+
+		<!-- WALLET -->
+		<section id="wallet" class="page hide">
+			<div class="card">
+				<h2>Wallet</h2>
+				<p>Balance: <strong><span id="walletCoins">0</span> coins</strong></p>
+				<p>Booking cost: <strong>150 coins</strong></p>
+				<div id="walletDetails">No active bookings.</div>
+			</div>
+		</section>
+
+		<!-- HELP -->
+		<section id="help" class="page hide">
+			<div class="card">
+				<h2>Help</h2>
+				<p>Select a slot, ensure you have at least 150 coins, and click the slot to book. You can cancel a booking to refund 150 coins.</p>
+			</div>
+		</section>
+
+	</main>
+
+	<footer class="footer">
+		<div class="desktop-nav">
+			<button onclick="show('home')">Home</button>
+			<button onclick="show('wallet')">Wallet</button>
+			<button onclick="show('help')">Help</button>
+		</div>
+	</footer>
+
+	<!-- mobile nav for small screens -->
+	<nav class="mobile-nav" aria-label="mobile navigation">
+		<button onclick="show('home')">🏠</button>
+		<button onclick="show('wallet')">💳</button>
+		<button onclick="show('help')">❓</button>
+	</nav>
+
+<script src="js/user.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" href="css/new-style.css">
+	<title>Toki Gaming Hub</title>
+</head>
+
+<body class="bg-login">
+
+	<header class="hero">
+		<div class="hero-inner">
+			<div>
+				<h1 class="hero-title">Toki Gaming Hub</h1>
+				<p class="hero-sub">Book gaming slots, earn tokens, and play with friends. Quick bookings, tight matches.</p>
+				<div class="hero-ctas">
+					<a class="btn primary" href="login.html">Enter Hub</a>
+					<a class="btn" href="user.html">Explore as Guest</a>
+					<!-- ✅ ADMIN BUTTON -->
+					<button class="btn primary" onclick="goAdmin()">Admin</button>
+				</div>
+			</div>
+
+			<div class="hero-visual">
+				<div class="card compact">
+					<h3>Next Slots</h3>
+					<ul class="small-slots">
+						<li>9:00 — 12:00 • 7 seats left</li>
+						<li>12:00 — 15:00 • 4 seats left</li>
+						<li>15:00 — 18:00 • 2 seats left</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<main class="landing container">
+		<section class="features card">
+			<h2>Why Toki?</h2>
+			<div class="features-grid">
+				<div class="feature">
+					<h4>Fast Booking</h4>
+					<p>Reserve a play slot in seconds and get a token to confirm.</p>
+				</div>
+				<div class="feature">
+					<h4>Earn Coins</h4>
+					<p>Play and earn coins to unlock premium slots or discounts.</p>
+				</div>
+				<div class="feature">
+					<h4>Community</h4>
+					<p>Find teammates and join events hosted at the hub.</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="cta card">
+			<h3>Ready to play?</h3>
+			<p>Sign in to manage bookings and view your wallet.</p>
+			<a class="btn primary" href="login.html">Log in / Sign up</a>
+		</section>
+	</main>
+
+	<footer class="footer">© <span id="year">2026</span> Toki Gaming Hub</footer>
+
+	<!-- ✅ ADMIN REDIRECT -->
+	<script>
+		function goAdmin() {
+			window.location.href = "admin.html";
+		}
+	</script>
+
+</body>
+</html>

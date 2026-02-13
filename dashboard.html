@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>QueueLess Dashboard</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>QueueLess Dashboard</h2>
+
+    <select id="slot">
+      <option value="">Select Slot</option>
+      <option value="MORNING">Morning</option>
+      <option value="AFTERNOON">Afternoon</option>
+      <option value="EVENING">Evening</option>
+    </select>
+
+    <button onclick="applyToken()">Apply Token</button>
+
+    <div class="token-box" id="tokenBox">
+      <p><strong>Your Token:</strong></p>
+      <p id="tokenDetails">No token yet</p>
+    </div>
+
+    <p id="error" style="color:red; margin-top:10px; text-align:center;"></p>
+  </div>
+
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

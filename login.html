@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+		<link rel="stylesheet" href="css/new-style.css">
+	<title>Login — Toki Gaming Hub</title>
+</head>
+
+<body class="center bg-login">
+
+	<div class="card login-card">
+		<h2>Welcome Back</h2>
+		<p class="muted">Sign in to access bookings and your wallet</p>
+
+		<label class="field">
+			<input id="name" placeholder="Username" required>
+		</label>
+		<label class="field">
+			<input id="email" placeholder="Email" required>
+		</label>
+		<label class="field">
+			<input id="pass" type="password" placeholder="Password" required>
+		</label>
+
+		<button id="loginBtn" class="btn primary">Login</button>
+		<button id="registerBtn" class="btn primary">Register</button>
+
+
+		<div class="alt">
+			<a href="index.html" class="link">Back to home</a>
+			<a href="#" class="link" onclick="alert('Forgot password flow coming soon')">Forgot?</a>
+		</div>
+	</div>
+
+	<script src="js/auth.js"></script>
+
+</body>
+</html>
